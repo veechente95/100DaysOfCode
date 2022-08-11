@@ -69,7 +69,7 @@ def play_game():
 
     # Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
     # If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
-    # The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
+    # The score will need to be rechecked with every new card drawn and the checks need to be repeated until the game ends.
 
     while not is_game_over:
         user_score = calculate_score(user_cards)
