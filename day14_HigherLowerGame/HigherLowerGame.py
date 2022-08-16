@@ -7,6 +7,7 @@ def get_random_account():
     """Get data from random account"""
     return random.choice(data)
 
+
 # Format account data into printable format.
 def format_data(account):
     """Format account into printable format: name, description and country"""
