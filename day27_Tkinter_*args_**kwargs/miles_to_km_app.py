@@ -4,7 +4,7 @@ from tkinter import *  # imports every single class
 def miles_to_km():
     miles = float(miles_input.get())
     km = round(miles * 1.609, 3)
-    km_result_label.config(text=km)    # converts into a string
+    km_result_label.config(text=km)
 
 
 window = Tk()
