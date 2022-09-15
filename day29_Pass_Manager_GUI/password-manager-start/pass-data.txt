@@ -1,0 +1,4 @@
+Facebook | test@gmail.com | 123456
+Twitter | test@gmail.com | qwerty
+Halo | test@gmail.com | Haloguy
+Netflix | test@gmail.com | 987654321
