@@ -53,4 +53,3 @@ if today_tuple in birthday_dict:
             msg=f"Subject:Happy Birthday!!!\n\n{contents}"
         )
 
-
