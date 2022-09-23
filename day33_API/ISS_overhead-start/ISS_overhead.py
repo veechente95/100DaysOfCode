@@ -3,7 +3,7 @@ from datetime import datetime
 import smtplib
 import time
 
-
+# Location based in Los Angeles, California
 MY_LAT = 34.052235
 MY_LONG = -118.243683
 MY_EMAIL = "test@gmail.com"
