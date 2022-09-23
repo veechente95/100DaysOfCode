@@ -28,7 +28,7 @@ def is_night():
     parameters = {
         "lat": MY_LAT,
         "lng": MY_LONG,
-        "formatted": 0,
+        "formatted": 0,   # formats to date and time (2022-09-23T13:40:45+00:00)
     }
     # Sunrise and sunset API
     response = requests.get("https://api.sunrise-sunset.org/json", params=parameters)
