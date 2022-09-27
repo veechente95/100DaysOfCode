@@ -2,12 +2,13 @@
 
 import requests
 from twilio.rest import Client
+import os
 
 twilio_account_sid = os.environ["account_sid"]
 twilio_auth_token = os.environ["Auth_Token"]
 
 OWM_Endpoint = "https://api.openweathermap.org/data/3.0/onecall"
-api_key = "47e9da846fdfb65bc19d1386305a8230"
+api_key = "API Key"
 
 # Los Angeles parameters
 weather_parameters = {
