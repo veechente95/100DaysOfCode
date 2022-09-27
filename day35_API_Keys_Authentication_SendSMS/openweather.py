@@ -1,41 +1,46 @@
 # Pull API requests from openweathermap.org and send SMS messages if it's going to rain
 
+#Note! For the code to work you need to replace all the placeholders with
+#Your own details. e.g. account_sid, lat/lon, from/to phone numbers.
+
 import requests
-from twilio.rest import Client
 import os
+from twilio.rest import Client
+from twilio.http.http_client import TwilioHttpClient
 
-twilio_account_sid = os.environ["account_sid"]
-twilio_auth_token = os.environ["Auth_Token"]
+OWM_Endpoint = "https://api.openweathermap.org/data/2.5/onecall"
+api_key = os.environ.get("OWM_API_KEY")
+account_sid = "YOUR ACCOUNT SID"
+auth_token = os.environ.get("AUTH_TOKEN")
 
-OWM_Endpoint = "https://api.openweathermap.org/data/3.0/onecall"
-api_key = "API Key"
-
-# Los Angeles parameters
-weather_parameters = {
-    "lat": 34.052235,
-    "lon": -118.243683,
+weather_params = {
+    "lat": "YOUR LATITUDE",
+    "lon": "YOUR LONGITUDE",
     "appid": api_key,
     "exclude": "current,minutely,daily"
 }
 
-response = requests.get(OWM_Endpoint, params=weather_parameters)
-response.raise_for_status()  # will tell us https status code if error
+response = requests.get(OWM_Endpoint, params=weather_params)
+response.raise_for_status()
 weather_data = response.json()
-weather_slice = weather_data["hourly"][:12]  # slice items from the beginning (0 hour) through stop (11th hour)
+weather_slice = weather_data["hourly"][:12]
 
 will_rain = False
 
 for hour_data in weather_slice:
-    weather_condition_code = hour_data["weather"][0]["id"]
-    if int(weather_condition_code) < 700:  # weather code under 700 means raining
+    condition_code = hour_data["weather"][0]["id"]
+    if int(condition_code) < 700:
         will_rain = True
 
 if will_rain:
-    client = Client(twilio_account_sid, twilio_auth_token)
+    proxy_client = TwilioHttpClient()
+    proxy_client.session.proxies = {'https': os.environ['https_proxy']}
+
+    client = Client(account_sid, auth_token, http_client=proxy_client)
     message = client.messages \
         .create(
-            body="It's going to rain today! Bring an umbrella!☔️",
-            from_="from number",
-            to="to number"
+            body="It's going to rain today. Remember to bring an ☔️",
+            from_="YOUR TWILIO VIRTUAL NUMBER",
+            to="YOUR TWILIO VERIFIED REAL NUMBER"
         )
-    print(message.sid)
+    print(message.status)
