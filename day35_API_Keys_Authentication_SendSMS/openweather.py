@@ -34,8 +34,8 @@ if will_rain:
     client = Client(twilio_account_sid, twilio_auth_token)
     message = client.messages \
         .create(
-        body="It's going to rain today! Bring an umbrella!☔️",
-        from_="from number",
-        to="to number"
-    )
+            body="It's going to rain today! Bring an umbrella!☔️",
+            from_="from number",
+            to="to number"
+        )
     print(message.sid)
