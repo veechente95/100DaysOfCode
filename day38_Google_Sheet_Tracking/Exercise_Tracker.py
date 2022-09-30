@@ -1,6 +1,9 @@
 import requests
 from datetime import datetime
 
+# Nutrition API Doc: https://docs.google.com/document/d/1_q-K-ObMTZvO0qUEAxROrN3bwMujwAN25sLHwJzliK0/edit#
+# Sheety: https://sheety.co/
+
 GENDER = YOUR GENDER
 WEIGHT_KG = YOUR WEIGHT
 HEIGHT_CM = YOUR HEIGHT
