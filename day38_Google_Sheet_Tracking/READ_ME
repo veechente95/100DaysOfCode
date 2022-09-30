@@ -1,0 +1,5 @@
+
+
+Building an exercise tracking application using python and google sheets. 
+The data will go into our spreadhseet on google sheets. 
+Built using the python datetime strftime() method, using API post requests, creating authorization headers and environment variables.
