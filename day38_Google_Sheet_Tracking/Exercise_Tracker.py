@@ -2,25 +2,23 @@ import requests
 from datetime import datetime
 import os
 
-# Nutrition API Doc: https://docs.google.com/document/d/1_q-K-ObMTZvO0qUEAxROrN3bwMujwAN25sLHwJzliK0/edit#
-# Sheety: https://sheety.co/
+GENDER = "GENDER"
+WEIGHT_KG = 123
+HEIGHT_CM = 123
+AGE = 123
 
-GENDER = YOUR GENDER
-WEIGHT_KG = YOUR WEIGHT
-HEIGHT_CM = YOUR HEIGHT
-AGE = YOUR AGE
-
-APP_ID = os.environ["NT_APP_ID"]
-API_KEY = os.environ["NT_API_KEY"]
+NUTRITIONIX_APP_ID = "NUTRITIONIX_APP_ID"
+NUTRITIONIX_API_KEY = "1NUTRITIONIX_API_KEY"
+SHEETY_BEARER_TOKEN = "SHEETY_BEARER_TOKEN"
 
 exercise_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
-sheet_endpoint = os.environ["SHEET_ENDPOINT"]
+sheet_endpoint = "sheet_endpoint"
 
 exercise_text = input("Tell me which exercises you did: ")
 
 headers = {
-    "x-app-id": APP_ID,
-    "x-app-key": API_KEY,
+    "x-app-id": NUTRITIONIX_APP_ID,
+    "x-app-key": NUTRITIONIX_API_KEY,
 }
 
 parameters = {
@@ -33,17 +31,19 @@ parameters = {
 
 response = requests.post(exercise_endpoint, json=parameters, headers=headers)
 result = response.json()
+print(result)
 
 today_date = datetime.now().strftime("%d/%m/%Y")
 now_time = datetime.now().strftime("%X")
 
+# Bearer Token
 bearer_headers = {
-    "Authorization": f"Bearer {os.environ['TOKEN']}"
+    "Authorization": f"Bearer {SHEETY_BEARER_TOKEN}"
 }
 
 for exercise in result["exercises"]:
     sheet_inputs = {
-        "workout": {
+        "sheet1": {
             "date": today_date,
             "time": now_time,
             "exercise": exercise["name"].title(),
@@ -52,6 +52,5 @@ for exercise in result["exercises"]:
         }
     }
 
-    sheet_response = requests.post(sheet_endpoint, json=sheet_inputs, headers=bearer_headers)
-
+    sheet_response = requests.post(url=sheet_endpoint, json=sheet_inputs, headers=bearer_headers)
     print(sheet_response.text)
