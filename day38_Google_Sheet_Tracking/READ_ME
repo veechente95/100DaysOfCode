@@ -1,4 +1,5 @@
-
+# Nutrition API Doc: https://docs.google.com/document/d/1_q-K-ObMTZvO0qUEAxROrN3bwMujwAN25sLHwJzliK0/edit#
+# Sheety: https://sheety.co/
 
 Building an exercise tracking application using python and google sheets. 
 The data will go into our spreadhseet on google sheets. 
