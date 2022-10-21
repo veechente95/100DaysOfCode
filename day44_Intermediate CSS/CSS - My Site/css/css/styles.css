@@ -1,47 +1,62 @@
 body {
-  color: #40514E;
+  background: #111;
   margin: 0;
   text-align: center;
   font-family: 'Merriweather', serif;
 }
 
 h1 {
-  color: #66BFBF;
-  font-size: 4.5rem;
+  color: #EAF6F6;
+  font-size: 4rem;
   /*margin for box for top, right, bottom and left*/
   margin: 50px auto 0 auto;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Merriweather', serif;
 }
 
 h2 {
-  color: #66BFBF;
+  font-size: 2.5rem;
   font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem
   padding-bottom: 10px;
+  background: linear-gradient(271deg,#a0e9ff 40%,#a162e8 50%,#f093b0 60%,#edca85 7%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h3 {
-  color: #11999E;
+  color: #EAF6F6;
   font-family: 'Montserrat', sans-serif;
 }
 
 p {
   line-height: 2;
+  color: #EAF6F6;
 }
 
 
 hr {
-  border: dotted #EAF6F6 10px;
+  border: dotted #B2B2B2 8px;
   border-bottom: none;
   width: 6%;
   margin: 100px auto 100px auto;
 }
 
 a {
-  color: #11999E;
+  color: #F9F9F9;
   font-family: 'Montserrat', sans-serif;
   margin: 10px 20px;
   text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.intro-text {
+  background: linear-gradient(271deg,#a0e9ff 40%,#a162e8 50%,#f093b0 60%,#edca85 7%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-me {
+  width: 60%;
+  margin: auto;
 }
 
 a:hover {
@@ -49,7 +64,7 @@ a:hover {
 }
 
 .top-container {
-  background-color:  #EAF6F6;
+  background: #111;
   position: relative;
   padding-top: 100px;
 }
@@ -73,15 +88,6 @@ margin: 100px 0 100px 0;
   text-decoration: underline;
 }
 
-.profile {
-
-}
-
-.intro{
-  width: 45%;
-  margin: auto;
-}
-
 .contact-message {
   width: 40%;
   margin: 40px auto 60px auto;
@@ -89,23 +95,23 @@ margin: 100px 0 100px 0;
 
 .copyright {
   color:  #EAF6F6;
-  font-size: 0.75rem;
+  font-size: 1rem;
   padding: 20px 0;
 }
 
-.top-cloud {
+.top-venus {
   position: absolute;
   right: 300px;
   top: 40px;
 }
 
-.bottom-cloud {
+.bottom-satellite {
   position: absolute;
-  left: 250px;
+  left: 200px;
   bottom: 300px;
 }
 
-.code-img {
+.coding-img {
   width: 25%;
   float: left;
   margin-right: 30px;
