@@ -7,7 +7,7 @@ body {
 
 h1 {
   color: #EAF6F6;
-  font-size: 4rem;
+  font-size: 4.5rem;
   /*margin for box for top, right, bottom and left*/
   margin: 50px auto 0 auto;
   font-family: 'Merriweather', serif;
@@ -15,6 +15,8 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
+  width: 75%;
+  margin: auto;
   font-family: 'Montserrat', sans-serif;
   padding-bottom: 10px;
   background: linear-gradient(271deg,#a0e9ff 40%,#a162e8 50%,#f093b0 60%,#edca85 7%);
@@ -32,7 +34,6 @@ p {
   color: #EAF6F6;
 }
 
-
 hr {
   border: dotted #B2B2B2 8px;
   border-bottom: none;
@@ -41,14 +42,19 @@ hr {
 }
 
 a {
-  color: #F9F9F9;
+  color: #11999E;
   font-family: 'Montserrat', sans-serif;
   margin: 10px 20px;
   text-decoration: none;
   font-size: 1.5rem;
 }
 
+a:hover {
+  color: #EAF6F6;
+}
+
 .intro-text {
+  color: black;
   background: linear-gradient(271deg,#a0e9ff 40%,#a162e8 50%,#f093b0 60%,#edca85 7%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -59,23 +65,24 @@ a {
   margin: auto;
 }
 
-a:hover {
-  color: #EAF6F6;
-}
-
 .top-container {
-  background: #111;
+  background: white;
   position: relative;
   padding-top: 100px;
 }
 
 .middle-container {
-margin: 100px 0 100px 0;
+  margin: 100px 0;
 }
 
 .bottom-container {
   background-color: #66BFBF;
-  padding: 50px 0 20px 0;
+  padding: 50px 0 20px;
+}
+
+.contact-message {
+  width: 40%;
+  margin: 40px auto 60px auto;
 }
 
 .skill-row {
@@ -84,13 +91,8 @@ margin: 100px 0 100px 0;
   text-align: left;
 }
 
-.pro {
-  text-decoration: underline;
-}
-
-.contact-message {
-  width: 40%;
-  margin: 40px auto 60px auto;
+.portrait {
+  width: 30%;
 }
 
 .copyright {
@@ -99,16 +101,19 @@ margin: 100px 0 100px 0;
   padding: 20px 0;
 }
 
-.top-venus {
+.top-cloud {
+  background-color: green;
   position: absolute;
-  right: 300px;
+  right: 250px;
   top: 40px;
+  width: 10%;
 }
 
-.bottom-satellite {
+.bottom-cloud {
   position: absolute;
   left: 200px;
   bottom: 300px;
+  width: 10%;
 }
 
 .coding-img {
