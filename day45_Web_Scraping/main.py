@@ -38,5 +38,3 @@ print(company_url)  # <a href="https://www.appbrewery.co/">The App Brewery</a>
 # Get a hold of ID using "#" sign
 name = soup.select_one(selector="#name")
 print(name)     # <h1 id="name">Angela Yu</h1>
-
-
