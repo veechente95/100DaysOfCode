@@ -18,13 +18,6 @@ print(all_anchor_tags)
 for tag in all_anchor_tags:
     print(tag.getText())
 
-# What if you only wanted links?
-for tag in all_anchor_tags:
-    print(tag.get("href"))
-
-# can also get a hold of attribute names
-heading = soup.find(name="h1", id="name")
-print(heading)      # <h1 id="name">Angela Yu</h1>
 
 # can also get a hold of class
 section_heading = soup.find(name="h3", class_="heading")
