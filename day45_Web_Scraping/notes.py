@@ -18,7 +18,6 @@ print(all_anchor_tags)
 for tag in all_anchor_tags:
     print(tag.getText())
 
-
 # can also get a hold of class
 section_heading = soup.find(name="h3", class_="heading")
 print(section_heading)  # <h3 class="heading">Books and Teaching</h3>
