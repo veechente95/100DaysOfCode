@@ -31,4 +31,10 @@ print(company_url)  # <a href="https://www.appbrewery.co/">The App Brewery</a>
 name = soup.select_one(selector="#name")
 print(name)     # <h1 id="name">Angela Yu</h1>
 
+# What if you only wanted links?
+for tag in all_anchor_tags:
+    print(tag.get("href"))
 
+# can also get a hold of attribute names
+heading = soup.find(name="h1", id="name")
+print(heading)      # <h1 id="name">Angela Yu</h1>
