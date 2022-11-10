@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-chrome_drover_path = "/Users/veechente/Desktop/Development/chromedriver"
+chrome_drover_path = "YOUR CHROME DRIVER PATH"
 driver = webdriver.Chrome(executable_path=chrome_drover_path)
 
 # TODO: Pull price from Amazon by ID
