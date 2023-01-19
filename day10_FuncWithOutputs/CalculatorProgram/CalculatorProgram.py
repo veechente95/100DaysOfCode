@@ -15,7 +15,6 @@ logo = """
 |_____________________|
 """
 
-print(logo)
 
 def add(n1, n2):
     return n1 + n2
@@ -43,14 +42,15 @@ operations = {
 
 
 def calculator():
-    num1 = int(input("What is your first number?: "))
+    print(logo)
+    num1 = float(input("What is your first number?: "))
     for key in operations:
         print(key)
 
     calc_on = True
     while calc_on:
         operation_symbol = input("Pick an operation: ")
-        num2 = int(input("What is your next number?: "))
+        num2 = float(input("What is your next number?: "))
 
         calculation_function = operations[operation_symbol]
         answer = calculation_function(num1, num2)
