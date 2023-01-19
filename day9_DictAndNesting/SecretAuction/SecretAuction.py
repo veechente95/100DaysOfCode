@@ -17,6 +17,7 @@ while not bidding_finished:
     name = str(input("What is your name: "))
     price = int(input("What is your bid: $"))
     bids[name] = price
+    
     should_continue = str(input("Bid again? Select 'yes' or 'no': ")).lower()
     if should_continue == "no":
         bidding_finished = True
