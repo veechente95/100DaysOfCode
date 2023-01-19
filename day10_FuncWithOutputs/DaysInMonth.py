@@ -1,3 +1,4 @@
+# Interactive coding exercises - Days of the month
 def is_leap(year):
     if year % 4 == 0:
         if year % 100 == 0:
@@ -12,6 +13,7 @@ def is_leap(year):
 
 
 def days_in_month(year, month):
+    # catches an invalid month 
     if month > 12 or month < 1:
         return "Invalid month"
     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
