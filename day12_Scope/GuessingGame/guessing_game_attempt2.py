@@ -21,35 +21,40 @@ logo = """
 ATTEMPTS = 10
 GUESS_NUMBER = random.randint(1, 100)
 
-print(logo)
-print("Welcome To The Number Guessing Game!")
-print("I'm thinking of a number between 1 and 100.")
-print(f"Pss ... The correct answer is {GUESS_NUMBER}")
-print(f"You have {ATTEMPTS} attempts remaining to guess the number.")
+
+def calculate_score(user_guess, GUESS_NUMBER, turns):
+    if user_guess != GUESS_NUMBER:
+        new_attempts = ATTEMPTS - 1
+    return new_attempts
 
 
 def play_game():
-    attempts = 10
-    user_guess = int(input("Make a guess: "))
     is_game_over = False
+
+    print(logo)
+    print("Welcome To The Number Guessing Game!")
+    print("I'm thinking of a number between 1 and 100.")
+    print(f"Pss ... The correct answer is {GUESS_NUMBER}")
+    print(f"You have {ATTEMPTS} attempts remaining to guess the number.")
+    user_guess = int(input("Make a guess: "))
 
     while not is_game_over:
         if user_guess > GUESS_NUMBER:
-            new_attempts = attempts - 1
             print("Too high! Guess again.")
-            print(f"You have {new_attempts} attempts remaining: ")
+            print(f"You have {calculate_score(user_guess)} attempts remaining.")
         elif user_guess < GUESS_NUMBER:
-            new_attempts = attempts - 1
+            new_attempts = ATTEMPTS - 1
             print("Too low! Guess again. ")
-            print(f"You have {new_attempts} attempts remaining: ")
+            print(f"You have {calculate_score(user_guess)} attempts remaining. ")
         elif user_guess == GUESS_NUMBER:
             print(f"You win! The correct number was {GUESS_NUMBER}")
         else:
-            if attempts == 0:
+            if user_guess == 0:
                 print(f"You lose! The correct number was {GUESS_NUMBER}")
-        is_game_over = True
+            is_game_over = True
 
 
 play_game()
+
 
 
