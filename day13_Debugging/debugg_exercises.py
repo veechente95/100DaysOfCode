@@ -27,5 +27,15 @@ if year > 1980 and year < 1994:         # (True) 1994 is greater than 1980 and (
 elif year > 1994:                       # (False) 1994 is not less than 1994
     print("You are a Gen Z!")           # line does not print
 
+    
+# TODO 4) Fix console errors before you continue
+# TypeError - '>' not supported between instances of 'str' and 'int'
 
+age = input("How old are you?: ")
+if age > 18:
+    print(f"You can drive at age {age}")
 
+# Answer
+age = int(input("How old are you?: "))   # convert to int() here
+if age > 18:
+    print(f"You can drive at age {age}")
