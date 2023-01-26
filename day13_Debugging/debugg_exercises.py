@@ -39,3 +39,16 @@ if age > 18:
 age = int(input("How old are you?: "))   # convert to int() here
 if age > 18:
     print(f"You can drive at age {age}")
+
+    
+# TODO 5) Print is your friend - Make print statements to help debug
+# Example what if we entered 10 pages and 20 words per page
+pages = 0
+word_per_page = 0
+pages = int(input("Number of pages: "))
+word_per_page == int(input("Number of words per page: "))   # error is here: needs to be '=' not '=='
+total_words = pages * word_per_page
+
+print(f"pages = {pages}")                   # 10 - ok good
+print(f"word per page = {word_per_page}")   # 0 - we know the problem is in this line of code b/c it's supposed to be 20
+print(total_words)                          # 0 because this it multiplies pages(10) * word_per_page(0). Error happens before this line of code
