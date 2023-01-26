@@ -1,7 +1,6 @@
 # Exercise 3 - FizzBuzz
 # Changed 'or' to an 'and' statement and 'if' to 'elif' statements
 
-# original code
 for number in range(1, 101):
     if number % 3 == 0 or number % 5 == 0:
         print("FizzBuzz")
@@ -12,13 +11,13 @@ for number in range(1, 101):
     else:
         print([number])
 
-# debugged code
+# Correct Answer 
 for number in range(1, 101):
-    if number % 3 == 0 and number % 5 == 0:
+    if number % 3 == 0 and number % 5 == 0:     # changes 'or' to 'and' statement 
         print("FizzBuzz")
-    elif number % 3 == 0:
+    elif number % 3 == 0:                       # made 'if' to elif
         print("Fizz")
-    elif number % 5 == 0:
+    elif number % 5 == 0:                       # made 'if' to elif
         print("Buzz")
     else:
-        print([number])
+        print(number)                           # removed '[]' around number
