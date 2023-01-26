@@ -1,4 +1,5 @@
 # Exercise 1 - Debugg Odd Or Even
+# Reads SyntaxError
 number = int(input("Which number do you want to check?"))
 
 if number % 2 = 0:
