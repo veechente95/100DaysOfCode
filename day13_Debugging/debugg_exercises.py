@@ -52,3 +52,6 @@ total_words = pages * word_per_page
 print(f"pages = {pages}")                   # 10 - ok good
 print(f"word per page = {word_per_page}")   # 0 - we know the problem is in this line of code b/c it's supposed to be 20
 print(total_words)                          # 0 because this it multiplies pages(10) * word_per_page(0). Error happens before this line of code
+
+
+# TODO 6) Use debugger tools like Thonny
