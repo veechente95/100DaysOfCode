@@ -19,4 +19,13 @@ print(dice_images[dice_num])
 
 
 # TODO 3)  Play Computer - Pretend you are reading code line by line
-year = int
+# Why is it that when you inout 1994, nothing gets printed? # Need to add >= operation on elif line of code
+
+year = int(input("What's your year of birth?: "))
+if year > 1980 and year < 1994:         # (True) 1994 is greater than 1980 and (False) 1994 is not less than 1994 - Statement become False
+    print("You are a millennial!")      # line doesn't print because False and True boolean make a False statement 
+elif year > 1994:                       # (False) 1994 is not less than 1994
+    print("You are a Gen Z!")           # line does not print
+
+
+
