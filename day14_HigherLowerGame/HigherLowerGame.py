@@ -1,3 +1,5 @@
+# Inspired by this game: http://www.higherlowergame.com/
+
 import random
 from GameData import data
 from HigherLowerGameArt import logo, vs
