@@ -1,6 +1,7 @@
 from Menu import MENU, resources
 
 
+# 4) Check if resources are sufficient
 def is_resource_sufficient(order_ingredients):
     """Returns True when order can be made, False if not enough ingredients."""
     for item in order_ingredients:
@@ -11,6 +12,7 @@ def is_resource_sufficient(order_ingredients):
             return True
 
 
+# 5) Process coins
 def process_coins():
     """Returns the total calculated from coins inserted."""
     print("Please insert coins.")
@@ -21,6 +23,7 @@ def process_coins():
     return total
 
 
+# 6) Check if transaction is successful
 def is_transaction_successful(money_received, drink_cost):
     """Return True if payment is accepted, or False if money is insufficient."""
     if money_received >= drink_cost:
@@ -34,6 +37,7 @@ def is_transaction_successful(money_received, drink_cost):
         return False
 
 
+# 7) Make coffee if transaction is successful and there are enough resources to make drink
 def make_coffee(drink_name, order_ingredients):
     """Deduct the required ingredients from the resources."""
     for item in order_ingredients:
@@ -45,12 +49,15 @@ profit = 0
 is_on = True
 
 while is_on:
+    # 1) Ask User what they want
     choice = str(input(f"What would you like? "
                        f"Espresso (${MENU['espresso']['cost']}), "
                        f"latte (${MENU['latte']['cost']}), or "
                        f"cappuccino (${MENU['cappuccino']['cost']}): ")).lower()
+    # 2) Turn off coffee machine by entering "off" to prompt
     if choice == "off":
         is_on = False
+    # 3) Print report of all items and total money made
     elif choice == "report":
         print(f"Water: {resources['water']}ml")
         print(f"Milk: {resources['milk']}ml")
@@ -62,6 +69,3 @@ while is_on:
             payment = process_coins()
             if is_transaction_successful(payment, drink["cost"]):
                 make_coffee(choice, drink["ingredients"])
-
-
-
