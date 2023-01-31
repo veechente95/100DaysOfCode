@@ -50,7 +50,7 @@ is_on = True
 
 while is_on:
     # 1) Ask User what they want
-    choice = str(input(f"What would you like? "
+    choice = str(input(f"What would you like? Please select one of the following.\n"
                        f"Espresso (${MENU['espresso']['cost']}), "
                        f"latte (${MENU['latte']['cost']}), or "
                        f"cappuccino (${MENU['cappuccino']['cost']}): ")).lower()
