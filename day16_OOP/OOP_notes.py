@@ -12,10 +12,9 @@ class Waiter:
         # adds money to restaurant
         
   
-# Create a class - Class are made using Pascal case (all new words start with an upper case letter)
-
-# car = object
-# Class = CarBlueprint
+# Create a Class
+# Note that Classes are written using Pascal Case (Words Start In Upper Case)
+# car = object. Class = CarBlueprint
 car = CarBlueprint()
 
 
